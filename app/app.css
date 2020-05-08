@@ -1,0 +1,175 @@
+/* font-family: 'Merriweather', serif;
+font-family: 'Nunito', sans-serif; 
+300 600
+<i class="fas fa-check-double"></i>
+*/
+
+* {
+   font-family: "Nunito", sans-serif;
+   font-weight: 300;
+   box-sizing: border-box;
+   color: var(--text-primary);
+}
+
+:root {
+   --primary: hsl(222, 100%, 70%);
+   --secondary: hsl(0, 100%, 70%);
+   --success: hsl(160, 50%, 50%);
+   --text-primary: hsl(0, 0%, 0%);
+   --text-opposite: hsl(0, 0%, 100%);
+   --shadow: hsla(0, 0%, 0%, 0.1);
+}
+
+.dark {
+   --primary: hsl(222, 100%, 70%);
+   --secondary: hsl(0, 100%, 70%);
+   --success: hsl(160, 50%, 50%);
+   --text-primary: hsl(0, 0%, 85%);
+   --text-opposite: hsl(270, 5%, 7%);
+   --shadow: hsla(0, 0%, 50%, 0.1);
+}
+
+::selection {
+   background-color: var(--primary);
+   color: hsl(0, 0%, 100%);
+}
+
+body {
+   background-color: var(--text-opposite);
+}
+
+.button {
+   border: none;
+   font-size: 1.1rem;
+   color: hsl(0, 0%, 100%);
+   border-radius: 7px;
+   font-weight: 600;
+   padding: 0.5rem 0;
+   transition: box-shadow 0.3s;
+}
+
+.button:hover, .button:focus {
+   box-shadow: 0px 3px 8px 0px var(--shadow);
+   outline: none;
+}
+
+.button-primary {
+   background: linear-gradient(90deg, hsl(222, 100%, 70%), hsl(222, 50%, 60%));
+}
+
+.button-secondary {
+   background: linear-gradient(90deg, hsl(42, 100%, 70%), hsl(2, 100%, 69%));
+}
+
+/* Navbar */
+
+/* #nav {
+   height: 70px;
+   position: fixed;
+   width: 100%;
+   box-shadow: 0px 3px 8px 0px var(--shadow);
+   z-index: 2;
+   background-color: var(--text-opposite);
+}
+
+#nav .container {
+   height: 100%;
+}
+
+#nav button {
+   width: 125px;
+}
+
+#nav .brand {
+   font-size: 2rem;
+}
+
+#nav .brand span {
+   font-family: 'Merriweather', serif;
+   font-weight: bold;
+} */
+
+/* Sign-up & Sign-in */
+
+#sign h1 {
+   font-family: 'Merriweather', serif;
+   font-weight: bold;
+}
+
+#sign h2 {
+   font-size: 1.5rem;
+}
+
+#sign h3 {
+   font-weight: 600;
+   font-size: 1.5rem;
+}
+
+#sign img {
+   max-width: 100%;
+   max-height: 70vh;
+}
+
+#sign .row {
+   height: 100vh;
+}
+
+#sign form {
+   max-width: 450px;
+   box-shadow: 0px 0px 25px 0px var(--shadow);
+   border-radius: 7px;
+}
+
+#sign button {
+   width: 100%;
+}
+
+#sign label {
+   font-size: 1.1rem;
+}
+
+#sign input {
+   transition: box-shadow 0.3s, border 0.3s;
+   border-radius: 7px;
+   padding: 20px 10px;
+   background-color: var(--text-opposite);
+   border-color: var(--shadow);
+}
+
+#sign input::placeholder {
+   color: var(--text-primary);
+   opacity: 0.5;
+}
+
+#sign input:hover, #sign input:focus {
+   outline: none;
+   box-shadow: 0px 3px 8px 0px var(--shadow);
+}
+
+#sign a {
+   color: var(--primary);
+   font-weight: 600;
+}
+
+#sign a:hover {
+   text-decoration: none;
+}
+
+/* Queries */
+
+@media (max-width: 991px) {
+   /* Log-in & Sign-in */
+   #sign h2 {
+      font-size: 1.2rem;
+   }
+   #sign h3 {
+      font-size: 1.3rem;
+   }
+}
+
+@media (max-width: 767px) {
+   /* Log-in & Sign-in */
+   #sign .row {
+      height: unset;
+   }
+}
