@@ -61,6 +61,26 @@ body {
    background: linear-gradient(90deg, hsl(42, 100%, 70%), hsl(2, 100%, 69%));
 }
 
+.button-add {
+   width: 50px;
+   height: 50px;
+   border-radius: 100%;
+   position: absolute;
+   bottom: 10px;
+   right: 10px;
+   box-shadow: 0px 0px 25px 0px var(--shadow);
+   transition: all 0.3s;
+}
+
+.button-add:hover {
+   box-shadow: 0px 0px 25px 5px var(--shadow);
+   transform: translateY(-3px);
+}
+
+button i {
+   color: hsl(0, 0%, 100%);
+}
+
 /* Navbar */
 
 /* #nav {
@@ -152,6 +172,32 @@ body {
 }
 
 #sign a:hover {
+   text-decoration: none;
+}
+
+/* Todos */
+
+#todos .row {
+   position: relative;
+   height: 90vh;
+}
+
+#todos .todo {
+   border-radius: 7px;
+   transition: all 0.3s;
+   border: 1px solid var(--shadow);
+}
+
+#todos .todo:hover {
+   transform: translateY(-5px);
+   box-shadow: 0px 0px 25px 0px var(--shadow);
+}
+
+#todos .progress {
+   background-color: var(--shadow);
+}
+
+#todos a {
    text-decoration: none;
 }
 
