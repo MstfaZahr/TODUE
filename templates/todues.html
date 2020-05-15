@@ -4,22 +4,26 @@
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Sign In - TODUE</title>
+   <title>TODUES</title>
    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
       integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
    <link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Nunito:wght@300;600&display=swap"
       rel="stylesheet">
-   <link rel="stylesheet" href="../app/app.css">
+   <link rel="stylesheet" href="../static/app.css">
 </head>
 
 <body class="">
    <div id="todos">
       <div class="container mt-5">
-         <div class="row">
-            <div class="col-12 col-md-6 col-lg-4 mb-4">
-               <a href="#">
-                  <div class="todo p-4 mx-4 mx-md-0">
-                     <h4 class="todo-name">Design</h4>
+         <a href="#">
+            <div class="todo d-flex flex-column flex-md-row mb-4 p-4 mx-4 mx-md-0">
+               <div class="col mb-3 mb-md-0">
+                  <h4 class="todo-name mb-3">Design</h4>
+                  <h6>Due Date: 20/05/2020</h6>
+                  <h6>Finished: 2 of 10 steps</h6>
+               </div>
+               <div class="col d-flex align-items-center">
+                  <div class="w-100">
                      <small>Progress</small>
                      <div class="progress mb-2">
                         <div class="progress-bar bg-success" style="width: 25%"></div>
@@ -29,9 +33,53 @@
                         <div class="progress-bar bg-warning" style="width: 35%"></div>
                      </div>
                   </div>
-               </a>
+               </div>
             </div>
-            <div class="col-12 col-md-6 col-lg-4 mb-4">
+         </a>
+         <a href="#">
+            <div class="todo d-flex flex-column flex-md-row mb-4 p-4 mx-4 mx-md-0">
+               <div class="col mb-3 mb-md-0">
+                  <h4 class="todo-name mb-3">Design</h4>
+                  <h6>Due Date: 20/05/2020</h6>
+                  <h6>Finished: 2 of 10 steps</h6>
+               </div>
+               <div class="col d-flex align-items-center">
+                  <div class="w-100">
+                     <small>Progress</small>
+                     <div class="progress mb-2">
+                        <div class="progress-bar bg-success" style="width: 25%"></div>
+                     </div>
+                     <small>Deadline</small>
+                     <div class="progress">
+                        <div class="progress-bar bg-warning" style="width: 35%"></div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </a>
+         <a href="#">
+            <div class="todo d-flex flex-column flex-md-row mb-4 p-4 mx-4 mx-md-0">
+               <div class="col mb-3 mb-md-0">
+                  <h4 class="todo-name mb-3">Design</h4>
+                  <h6>Due Date: 20/05/2020</h6>
+                  <h6>Finished: 2 of 10 steps</h6>
+               </div>
+               <div class="col d-flex align-items-center">
+                  <div class="w-100">
+                     <small>Progress</small>
+                     <div class="progress mb-2">
+                        <div class="progress-bar bg-success" style="width: 25%"></div>
+                     </div>
+                     <small>Deadline</small>
+                     <div class="progress">
+                        <div class="progress-bar bg-warning" style="width: 35%"></div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </a>
+
+         <!-- <div class="col-12 col-md-6 col-lg-4 mb-4">
                <a href="#">
                   <div class="todo p-4 mx-4 mx-md-0">
                      <h4 class="todo-name">Structure</h4>
@@ -60,10 +108,9 @@
                      </div>
                   </div>
                </a>
-            </div>
+            </div> -->
 
-            <button class="button button-primary button-add"><i class="fas fa-plus"></i></button>
-         </div>
+         <button class="button button-primary button-add"><i class="fas fa-plus"></i></button>
       </div>
    </div>
 
