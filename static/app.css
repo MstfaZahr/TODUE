@@ -270,6 +270,14 @@ input:checked~label .check {
    background-color: var(--shadow);
 }
 
+#todos .progress-bar {
+   background-color: var(--primary);
+}
+
+#todos small {
+   font-weight: 600;
+}
+
 #todos a {
    text-decoration: none;
 }
