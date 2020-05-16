@@ -13,14 +13,69 @@
 </head>
 
 <body class="">
+
+   <!-- Navbar -->
+
+   <nav id="nav" class="navbar navbar-expand-lg">
+      <div class="container">
+         <div class="brand mr-5">
+            <a href="/">
+               <i class="fas fa-check-double"></i>
+               <span>todue</span>
+            </a>
+         </div>
+         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" <span><i
+               class="fas fa-bars"></i></span>
+         </button>
+         <div class="collapse navbar-collapse" id="navbarText">
+            <div class="navbar-nav mr-auto">
+               <div class="nav-item">
+                  <a href="/todos">
+                     <i class="fas fa-list-alt"></i>
+                     <span>todos</span>
+                  </a>
+               </div>
+               <div class="nav-item">
+                  <a href="/todues" class="active">
+                     <i class="fas fa-stopwatch"></i>
+                     <span>todues</span>
+                  </a>
+               </div>
+               <div class="nav-item">
+                  <a href="/todates">
+                     <i class="fas fa-calendar-check"></i>
+                     <span>todates</span>
+                  </a>
+               </div>
+            </div>
+            <div class="nav-item mb-3 mb-lg-0">
+               <a href="/account">
+                  <i class="fas fa-user-circle"></i>
+                  <span>yousri</span>
+               </a>
+            </div>
+         </div>
+      </div>
+   </nav>
+
+   <!-- TODUES -->
+
    <div id="todos">
-      <div class="container mt-5">
+      <div class="container">
          <a href="#">
             <div class="todo d-flex flex-column flex-md-row mb-4 p-4 mx-4 mx-md-0">
-               <div class="col mb-3 mb-md-0">
-                  <h4 class="todo-name mb-3">Design</h4>
-                  <h6>Due Date: 20/05/2020</h6>
-                  <h6>Finished: 2 of 10 steps</h6>
+               <div class="col mb-3 mb-md-0 d-flex flex-column flex-sm-row">
+                  <div class="mr-4 mb-3 mb-sm-0 d-flex align-items-center">
+                     <input type="checkbox" id="todue-1">
+                     <label for="todue-1">
+                        <div class="check"><i class="fas fa-check"></i></div>
+                     </label>
+                  </div>
+                  <div>
+                     <h4 class="todo-name mb-3">Design Design Design</h4>
+                     <h6>Due Date: 20/05/2020</h6>
+                     <h6>Finished: 2 of 10 steps</h6>
+                  </div>
                </div>
                <div class="col d-flex align-items-center">
                   <div class="w-100">
@@ -38,10 +93,18 @@
          </a>
          <a href="#">
             <div class="todo d-flex flex-column flex-md-row mb-4 p-4 mx-4 mx-md-0">
-               <div class="col mb-3 mb-md-0">
-                  <h4 class="todo-name mb-3">Design</h4>
-                  <h6>Due Date: 20/05/2020</h6>
-                  <h6>Finished: 2 of 10 steps</h6>
+               <div class="col mb-3 mb-md-0 d-flex flex-column flex-sm-row">
+                  <div class="mr-4 mb-3 mb-sm-0 d-flex align-items-center">
+                     <input type="checkbox" id="todue-2">
+                     <label for="todue-2">
+                        <div class="check"><i class="fas fa-check"></i></div>
+                     </label>
+                  </div>
+                  <div>
+                     <h4 class="todo-name mb-3">Design Design Design</h4>
+                     <h6>Due Date: 20/05/2020</h6>
+                     <h6>Finished: 2 of 10 steps</h6>
+                  </div>
                </div>
                <div class="col d-flex align-items-center">
                   <div class="w-100">
@@ -59,10 +122,105 @@
          </a>
          <a href="#">
             <div class="todo d-flex flex-column flex-md-row mb-4 p-4 mx-4 mx-md-0">
-               <div class="col mb-3 mb-md-0">
-                  <h4 class="todo-name mb-3">Design</h4>
-                  <h6>Due Date: 20/05/2020</h6>
-                  <h6>Finished: 2 of 10 steps</h6>
+               <div class="col mb-3 mb-md-0 d-flex flex-column flex-sm-row">
+                  <div class="mr-4 mb-3 mb-sm-0 d-flex align-items-center">
+                     <input type="checkbox" id="todue-3">
+                     <label for="todue-3">
+                        <div class="check"><i class="fas fa-check"></i></div>
+                     </label>
+                  </div>
+                  <div>
+                     <h4 class="todo-name mb-3">Design Design Design</h4>
+                     <h6>Due Date: 20/05/2020</h6>
+                     <h6>Finished: 2 of 10 steps</h6>
+                  </div>
+               </div>
+               <div class="col d-flex align-items-center">
+                  <div class="w-100">
+                     <small>Progress</small>
+                     <div class="progress mb-2">
+                        <div class="progress-bar bg-success" style="width: 25%"></div>
+                     </div>
+                     <small>Deadline</small>
+                     <div class="progress">
+                        <div class="progress-bar bg-warning" style="width: 35%"></div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </a>
+         <a href="#">
+            <div class="todo d-flex flex-column flex-md-row mb-4 p-4 mx-4 mx-md-0">
+               <div class="col mb-3 mb-md-0 d-flex flex-column flex-sm-row">
+                  <div class="mr-4 mb-3 mb-sm-0 d-flex align-items-center">
+                     <input type="checkbox" id="todue-4">
+                     <label for="todue-4">
+                        <div class="check"><i class="fas fa-check"></i></div>
+                     </label>
+                  </div>
+                  <div>
+                     <h4 class="todo-name mb-3">Design Design Design</h4>
+                     <h6>Due Date: 20/05/2020</h6>
+                     <h6>Finished: 2 of 10 steps</h6>
+                  </div>
+               </div>
+               <div class="col d-flex align-items-center">
+                  <div class="w-100">
+                     <small>Progress</small>
+                     <div class="progress mb-2">
+                        <div class="progress-bar bg-success" style="width: 25%"></div>
+                     </div>
+                     <small>Deadline</small>
+                     <div class="progress">
+                        <div class="progress-bar bg-warning" style="width: 35%"></div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </a>
+         <a href="#">
+            <div class="todo d-flex flex-column flex-md-row mb-4 p-4 mx-4 mx-md-0">
+               <div class="col mb-3 mb-md-0 d-flex flex-column flex-sm-row">
+                  <div class="mr-4 mb-3 mb-sm-0 d-flex align-items-center">
+                     <input type="checkbox" id="todue-5">
+                     <label for="todue-5">
+                        <div class="check"><i class="fas fa-check"></i></div>
+                     </label>
+                  </div>
+                  <div>
+                     <h4 class="todo-name mb-3">Design Design Design</h4>
+                     <h6>Due Date: 20/05/2020</h6>
+                     <h6>Finished: 2 of 10 steps</h6>
+                  </div>
+               </div>
+               <div class="col d-flex align-items-center">
+                  <div class="w-100">
+                     <small>Progress</small>
+                     <div class="progress mb-2">
+                        <div class="progress-bar bg-success" style="width: 25%"></div>
+                     </div>
+                     <small>Deadline</small>
+                     <div class="progress">
+                        <div class="progress-bar bg-warning" style="width: 35%"></div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </a>
+         <a href="#">
+            <div class="todo d-flex flex-column flex-md-row mb-4 p-4 mx-4 mx-md-0">
+               <div class="col mb-3 mb-md-0 d-flex flex-column flex-sm-row">
+                  <div class="mr-4 mb-3 mb-sm-0 d-flex align-items-center">
+                     <input type="checkbox" id="todue-6">
+                     <label for="todue-6">
+                        <div class="check"><i class="fas fa-check"></i></div>
+                     </label>
+                  </div>
+                  <div>
+                     <h4 class="todo-name mb-3">Design Design Design</h4>
+                     <h6>Due Date: 20/05/2020</h6>
+                     <h6>Finished: 2 of 10 steps</h6>
+                  </div>
                </div>
                <div class="col d-flex align-items-center">
                   <div class="w-100">
@@ -79,42 +237,40 @@
             </div>
          </a>
 
-         <!-- <div class="col-12 col-md-6 col-lg-4 mb-4">
-               <a href="#">
-                  <div class="todo p-4 mx-4 mx-md-0">
-                     <h4 class="todo-name">Structure</h4>
-                     <small>Progress</small>
-                     <div class="progress mb-2">
-                        <div class="progress-bar bg-success" style="width: 15%"></div>
-                     </div>
-                     <small>Deadline</small>
-                     <div class="progress">
-                        <div class="progress-bar bg-warning" style="width: 50%"></div>
-                     </div>
-                  </div>
-               </a>
-            </div>
-            <div class="col-12 col-md-6 col-lg-4 mb-4">
-               <a href="#">
-                  <div class="todo p-4 mx-4 mx-md-0">
-                     <h4 class="todo-name">Architecture History</h4>
-                     <small>Progress</small>
-                     <div class="progress mb-2">
-                        <div class="progress-bar bg-success" style="width: 80%"></div>
-                     </div>
-                     <small>Deadline</small>
-                     <div class="progress">
-                        <div class="progress-bar bg-warning" style="width: 70%"></div>
-                     </div>
-                  </div>
-               </a>
-            </div> -->
+         <!-- Floating Buttons -->
 
-         <button class="button button-primary button-add"><i class="fas fa-plus"></i></button>
+         <button class="button button-primary button-float" data-toggle="modal" data-target="#modal"><i
+               class="fas fa-plus"></i></button>
+         <a href="/todues-history">
+            <button class="button button-primary button-float history"><i class="fas fa-history"></i></button>
+         </a>
+
+         <!-- Add Form -->
+
+         <div class="modal fade" id="modal" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+               <div class="modal-content">
+                  <div class="modal-header">
+                     <h5 class="modal-title" id="modal-title">Create a new TODUE</h5>
+                  </div>
+                  <div class="modal-body">
+                     <form>
+                        <div class="form-group">
+                           <label for="todue-name">Enter the TODUE name:</label>
+                           <input type="text" id="todue-name" placeholder="TODUE name" class="form-control">
+                        </div>
+                        <div class="form-group">
+                           <label for="date">Select the deadline date:</label>
+                           <input type="date" id="date" class="form-control">
+                        </div>
+                        <button type="submit" class="button button-primary mt-3">Add</button>
+                     </form>
+                  </div>
+               </div>
+            </div>
+         </div>
       </div>
    </div>
-
-
 
    <!-- Scripts -->
 

@@ -61,31 +61,74 @@ body {
    background: linear-gradient(90deg, hsl(42, 100%, 70%), hsl(2, 100%, 69%));
 }
 
-.button-add {
+.button-float {
    width: 50px;
    height: 50px;
    border-radius: 100%;
-   position: absolute;
-   bottom: 10px;
-   right: 10px;
+   position: fixed;
+   bottom: 35px;
+   right: calc(0.1 * 100vw);
    box-shadow: 0px 0px 25px 0px var(--shadow);
    transition: all 0.3s;
 }
 
-.button-add:hover {
+.button-float:hover {
    box-shadow: 0px 0px 25px 5px var(--shadow);
    transform: translateY(-3px);
 }
 
-button i {
+.button i {
    color: hsl(0, 0%, 100%);
+}
+
+input[type="checkbox"] {
+   display: none;
+}
+
+.check {
+   border: 2px solid var(--shadow);
+   border-radius: 100%;
+   width: 50px;
+   height: 50px;
+   background-color: var(--text-opposite);
+   position: relative;
+   transition: all 0.3s;
+}
+
+.check i {
+   color: var(--primary);
+   font-size: 1.3rem;
+   opacity: 0;
+   transition: all 0.3s;
+   position: absolute;
+   top: 13px;
+   right: 13px;
+}
+
+.check:hover i {
+   opacity: 1;
+}
+
+.check:hover {
+   border-color: var(--primary);
+}
+
+input:checked~label i {
+   opacity: 1;
+   color: hsl(0, 0%, 100%);
+}
+
+input:checked~label .check {
+   background-color: var(--primary);
+   border-color: hsla(0, 0%, 0%, 0);
 }
 
 /* Navbar */
 
-/* #nav {
-   height: 70px;
+#nav {
+   min-height: 70px;
    position: fixed;
+   top: 0;
    width: 100%;
    box-shadow: 0px 3px 8px 0px var(--shadow);
    z-index: 2;
@@ -97,7 +140,7 @@ button i {
 }
 
 #nav button {
-   width: 125px;
+   outline: none;
 }
 
 #nav .brand {
@@ -107,7 +150,33 @@ button i {
 #nav .brand span {
    font-family: 'Merriweather', serif;
    font-weight: bold;
-} */
+}
+
+#nav a {
+   text-decoration: none;
+}
+
+#nav a * {
+   transition: all 0.3s;
+   font-weight: 600;
+}
+
+#nav a:hover * {
+   color: var(--primary);
+}
+
+#nav .active * {
+   color: var(--primary);
+}
+
+#nav span {
+   text-transform: uppercase;
+   margin-left: 0.3rem;
+}
+
+#nav .navbar-nav .nav-item {
+   margin-right: 2rem;
+}
 
 /* Sign-up & Sign-in */
 
@@ -177,9 +246,13 @@ button i {
 
 /* Todos */
 
-#todos .row {
-   position: relative;
-   height: 90vh;
+#todos .container {
+   margin-top: 115px;
+   margin-bottom: 115px;
+}
+
+#todos .todo-name {
+   font-weight: 600;
 }
 
 #todos .todo {
@@ -201,9 +274,48 @@ button i {
    text-decoration: none;
 }
 
+#todos .history {
+   right: calc(0.1 * 100vw + 70px);
+}
+
+#todos .modal-title {
+   font-weight: 600;
+}
+
+#todos .modal button {
+   width: 100px;
+}
+
+#todos .modal-content {
+   background-color: var(--text-opposite);
+   box-shadow: 0px 0px 25px 15px var(--shadow);
+}
+
+#todos .modal input {
+   transition: box-shadow 0.3s, border 0.3s;
+   border-radius: 7px;
+   padding: 20px 10px;
+   background-color: var(--text-opposite);
+   border-color: var(--shadow);
+}
+
+#todos .modal input::placeholder {
+   color: var(--text-primary);
+   opacity: 0.5;
+}
+
+#todos .modal input:hover, #todos .modal input:focus {
+   outline: none;
+   box-shadow: 0px 3px 8px 0px var(--shadow);
+}
+
 /* Queries */
 
 @media (max-width: 991px) {
+   /* Navbar */
+   #nav .nav-item {
+      margin-top: 1rem;
+   }
    /* Log-in & Sign-in */
    #sign h2 {
       font-size: 1.2rem;
