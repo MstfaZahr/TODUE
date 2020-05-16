@@ -10,6 +10,9 @@
    <link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Nunito:wght@300;600&display=swap"
       rel="stylesheet">
    <link rel="stylesheet" href="../static/app.css">
+   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+   <script src="https://unpkg.com/gijgo@1.9.13/js/gijgo.min.js" type="text/javascript"></script>
+   <link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body class="">
@@ -251,19 +254,24 @@
             <div class="modal-dialog modal-dialog-centered" role="document">
                <div class="modal-content">
                   <div class="modal-header">
-                     <h5 class="modal-title" id="modal-title">Create a new TODUE</h5>
+                     <h5 class="modal-title" id="modal-title">Create a new Todue</h5>
                   </div>
                   <div class="modal-body">
                      <form>
                         <div class="form-group">
-                           <label for="todue-name">Enter the TODUE name:</label>
-                           <input type="text" id="todue-name" placeholder="TODUE name" class="form-control">
+                           <label for="todue-name">Task name:</label>
+                           <input type="text" id="todue-name" placeholder="Todue name" class="form-control">
                         </div>
                         <div class="form-group">
-                           <label for="date">Select the deadline date:</label>
-                           <input type="date" id="date" class="form-control">
+                           <label for="date">Deadline date:</label>
+                           <input id="date" class="form-control" placeholder="MM/DD/YYYY">
+                           <script>
+                              $('#date').datepicker();
+                           </script>
                         </div>
-                        <button type="submit" class="button button-primary mt-3">Add</button>
+                        <div class="text-right">
+                           <button type="submit" class="button button-primary mt-3">Add</button>
+                        </div>
                      </form>
                   </div>
                </div>
@@ -284,6 +292,7 @@
    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
       integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
       crossorigin="anonymous"></script>
+
 </body>
 
 </html>
