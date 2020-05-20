@@ -8,15 +8,16 @@ font-family: 'Nunito', sans-serif;
    font-family: "Nunito", sans-serif;
    font-weight: 300;
    box-sizing: border-box;
-   color: var(--text-primary);
+   color: var(--text);
 }
 
 :root {
    --primary: hsl(222, 100%, 70%);
    --secondary: hsl(0, 100%, 70%);
    --success: hsl(160, 50%, 50%);
-   --text-primary: hsl(0, 0%, 0%);
-   --text-opposite: hsl(0, 0%, 100%);
+   --text: hsl(0, 0%, 0%);
+   --body-background: hsl(216, 20%, 95%);
+   --card-background: hsl(0, 0%, 100%);
    --shadow: hsla(0, 0%, 0%, 0.1);
 }
 
@@ -24,9 +25,10 @@ font-family: 'Nunito', sans-serif;
    --primary: hsl(222, 100%, 70%);
    --secondary: hsl(0, 100%, 70%);
    --success: hsl(160, 50%, 50%);
-   --text-primary: hsl(0, 0%, 85%);
-   --text-opposite: hsl(270, 5%, 7%);
-   --shadow: hsla(0, 0%, 50%, 0.1);
+   --text: hsl(225, 15%, 90%);
+   --body-background: hsl(210, 5%, 10%);
+   --card-background: hsl(210, 5%, 15%);
+   --shadow: hsla(0, 0%, 75%, 0.1);
 }
 
 ::selection {
@@ -35,7 +37,7 @@ font-family: 'Nunito', sans-serif;
 }
 
 body {
-   background-color: var(--text-opposite);
+   background-color: var(--body-background);
 }
 
 .button {
@@ -45,11 +47,12 @@ body {
    border-radius: 7px;
    font-weight: 600;
    padding: 0.5rem 0;
-   transition: box-shadow 0.3s;
+   transition: all 0.3s;
 }
 
 .button:hover, .button:focus {
-   box-shadow: 0px 3px 8px 0px var(--shadow);
+   box-shadow: 0 3.2px 7.2px 0 var(--shadow), 0 0.6px 1.8px 0 var(--shadow);
+   transform: translateY(-3px);
    outline: none;
 }
 
@@ -68,12 +71,12 @@ body {
    position: fixed;
    bottom: 35px;
    right: calc(0.1 * 100vw);
-   box-shadow: 0px 0px 25px 0px var(--shadow);
+   box-shadow: 0 3.2px 7.2px 0 var(--shadow), 0 0.6px 1.8px 0 var(--shadow);
    transition: all 0.3s;
 }
 
 .button-float:hover {
-   box-shadow: 0px 0px 25px 5px var(--shadow);
+   box-shadow: 0 6.4px 14.4px 0 var(--shadow), 0 1.2px 3.6px 0 var(--shadow);
    transform: translateY(-3px);
 }
 
@@ -90,7 +93,7 @@ input[type="checkbox"] {
    border-radius: 100%;
    width: 50px;
    height: 50px;
-   background-color: var(--text-opposite);
+   background-color: var(--card-background);
    position: relative;
    transition: all 0.3s;
 }
@@ -130,9 +133,9 @@ input:checked~label .check {
    position: fixed;
    top: 0;
    width: 100%;
-   box-shadow: 0px 3px 8px 0px var(--shadow);
+   box-shadow: 0 3.2px 7.2px 0 var(--shadow), 0 0.6px 1.8px 0 var(--shadow);
    z-index: 2;
-   background-color: var(--text-opposite);
+   background-color: var(--card-background);
 }
 
 #nav .container {
@@ -205,8 +208,9 @@ input:checked~label .check {
 
 #sign form {
    max-width: 450px;
-   box-shadow: 0px 0px 25px 0px var(--shadow);
+   box-shadow: 0 25.6px 57.6px 0 var(--shadow), 0 4.8px 14.4px 0 var(--shadow);
    border-radius: 7px;
+   background-color: var(--card-background);
 }
 
 #sign button {
@@ -221,12 +225,12 @@ input:checked~label .check {
    transition: box-shadow 0.3s, border 0.3s;
    border-radius: 7px;
    padding: 20px 10px;
-   background-color: var(--text-opposite);
+   background-color: var(--card-background);
    border-color: var(--shadow);
 }
 
 #sign input::placeholder {
-   color: var(--text-primary);
+   color: var(--text);
    opacity: 0.5;
 }
 
@@ -258,12 +262,13 @@ input:checked~label .check {
 #todos .todo {
    border-radius: 7px;
    transition: all 0.3s;
-   border: 1px solid var(--shadow);
+   box-shadow: 0 1.6px 3.6px 0 var(--shadow), 0 0.3px 0.9px 0 var(--shadow);
+   background-color: var(--card-background);
 }
 
 #todos .todo:hover {
    transform: translateY(-5px);
-   box-shadow: 0px 0px 25px 0px var(--shadow);
+   box-shadow: 0 6.4px 14.4px 0 var(--shadow), 0 1.2px 3.6px 0 var(--shadow);
 }
 
 #todos .progress {
@@ -271,7 +276,7 @@ input:checked~label .check {
 }
 
 #todos .progress-bar {
-   background-color: var(--primary);
+   background: linear-gradient(90deg, hsl(222, 100%, 70%), hsl(222, 50%, 60%));
 }
 
 #todos small {
@@ -295,21 +300,21 @@ input:checked~label .check {
 }
 
 #todos .modal-content {
-   background-color: var(--text-opposite);
-   box-shadow: 0px 0px 25px 15px var(--shadow);
+   background-color: var(--card-background);
+   box-shadow: 0 25.6px 57.6px 0 var(--shadow), 0 4.8px 14.4px 0 var(--shadow);
 }
 
 #todos .modal input {
    transition: box-shadow 0.3s, border 0.3s;
    border-radius: 7px;
    padding: 20px 10px;
-   background-color: var(--text-opposite);
+   background-color: var(--card-background);
    border-color: var(--shadow);
    border: 1px solid hsl(210, 14%, 83%);
 }
 
 #todos .modal input::placeholder {
-   color: var(--text-primary);
+   color: var(--text);
    opacity: 0.5;
 }
 
